@@ -11,9 +11,10 @@ $('.actions').on('click', 'button', function (e) {
     $button.addClass('active')
         .siblings('.active').removeClass('active') //如果有active(设置了按钮选中的阴影)样式则删掉样式
 
+    // $('样式名称')可以通过变量来传入
     let className
 
-
+    // $('样式名称').animate({ left: 改变的数值 }, 1000) 可以用变量来传入
     let leftmove5 = "+=5%"
     let leftmove_5 = "-=7%"
 
@@ -22,7 +23,9 @@ $('.actions').on('click', 'button', function (e) {
         switch (idName) {
             case 'monkey':
                 className = ".monkey"
+                // 修改对应样式
                 $(className).css("animation", "monkeymove 1500ms steps(8) infinite");
+                // animate动画效果，向左平滑移动，花费1秒钟
                 $(className).animate({ left: leftmove5 }, 1000)
                 break
             case 'pig':
