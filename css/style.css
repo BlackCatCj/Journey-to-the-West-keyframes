@@ -1,0 +1,151 @@
+* {
+	padding: 0;
+	margin: 0;
+	/* 取消li的样式 */
+	list-style: none;
+}
+html,body {
+	height: 100%;
+}
+/* 背景的设置 */
+.main {
+	height: 100%;
+	width: 100%;
+	-webkit-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+}
+.main ul {
+	height: 100%;
+	width: 3920px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: bg 50s linear infinite;
+}
+/* 背景图的移动 */
+@keyframes bg {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: 1920px;
+	}
+}
+.main ul li {
+	height: 100%;
+	width: 100%;
+	background: url(../img/背景.jpg);
+	background-repeat: no-repeat;
+	float: left;
+	margin-left: -2000px;
+}
+
+
+/* 孙悟空走路 */
+.monkey {
+	z-index: 999;
+	width: 200px;
+	height: 180px;
+	/* 引入孙悟空的图片并定位 不重复 */
+	background: url(../img/孙悟空.png) 0 0 no-repeat;
+	position: absolute;
+	top: 45%;
+	left: 20%;
+	/* 动画  1秒钟 播放8张图片 无限循环 */
+	animation: monkeymove 1000ms steps(8) infinite;
+	
+}
+@keyframes monkeymove {
+	to {
+		/* 从第一张开始，1秒钟把图片进行向左移动完，移动到第8张是1600像素 */
+		background-position: -1600px 0;
+	}
+}
+/* 猪八戒走路 */
+.pig {
+	z-index: 999;
+	width: 200px;
+	height: 180px;
+	background: url(../img/猪八戒.png) 0 0 no-repeat;
+	position: absolute;
+	top: 60%;
+	left: 35%;
+	animation: pigmove 1s steps(8) infinite;
+
+}
+@keyframes pigmove {
+	to {
+		background-position: -1600px 0;
+	}
+}
+/* 唐僧走路 */
+.TangMonk {
+	z-index: 999;
+	width: 170px;
+	height: 240px;
+	background: url(../img/唐僧.png) 0 0 no-repeat;
+	position: absolute;
+	top: 48%;
+	margin-top: -24px ;
+	left: 50%;
+	animation: TangMonkmove 1s steps(8) infinite;
+}
+@keyframes TangMonkmove {
+	to {
+		background-position: -1360px 0;
+	}
+}
+/* 沙僧走路 */
+.ShaMonk {
+	z-index: 999;
+	width: 210px;
+	height: 200px;
+	background: url(../img/沙僧.png) 0 0  no-repeat;
+	position: absolute;
+	top: 65%;
+	margin-top: -35px ;
+	left: 62%;
+	animation: ShaMonkmove 1s steps(8) infinite;
+}
+@keyframes ShaMonkmove {
+	to {
+		background-position: -1680px 0;
+	}
+}
+
+
+
+
+.actions{
+    position: absolute;
+    bottom: 0;
+    display:flex;
+	flex-direction: row;
+	/* 按钮居中 */
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.actions>button { /* 按钮美化 */
+	width: 50px; /* 宽度 */
+    height: 20px; /* 高度 */
+    margin:5px;
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 20px; /* 边框半径 */
+	background: #1E90FF; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+    font-size: 10px; /* 字体大小 */
+    
+}
+.actions>button:hover { /* 鼠标移入按钮范围时改变颜色 */
+	background: #5599FF;
+}
+
+.actions>button.active{
+    box-shadow: 2px 2px 3px rgba(0, 0, 0 , 0.8);
+}

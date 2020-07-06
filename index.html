@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>西游记-帧动画</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <div class="monkey" id="monkey">
+        <div class="actions">
+            <button data-speed="slow">慢速</button>
+            <button data-speed="normal" class="active">中速</button>
+            <button data-speed="fast">快速</button>
+        </div>
+    </div>
+    <div class="pig" id="pig">
+        <div class="actions">
+            <button data-speed="slow">慢速</button>
+            <button data-speed="normal" class="active">中速</button>
+            <button data-speed="fast">快速</button>
+        </div>
+    </div>
+    <div class="TangMonk" id="TangMonk">
+        <div class="actions">
+            <button data-speed="slow">慢速</button>
+            <button data-speed="normal" class="active">中速</button>
+            <button data-speed="fast">快速</button>
+        </div>
+    </div>
+    <div class="ShaMonk" id="ShaMonk">
+        <div class="actions">
+            <button data-speed="slow">慢速</button>
+            <button data-speed="normal" class="active">中速</button>
+            <button data-speed="fast">快速</button>
+        </div>
+    </div>
+    <div class="main">
+        <!-- 两张背景图片实现背景的滚动 -->
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </div>
+
+    <!-- jquery文件必须写在js文件之前,否则会报错!! -->
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <!-- 引入当前目录下的main.js文件 -->
+    <script src="./js/main.js"></script>
+
+
+</body>
+
+</html>
