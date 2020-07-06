@@ -24,23 +24,23 @@ $('.actions').on('click', 'button', function (e) {
             case 'monkey':
                 className = ".monkey"
                 // 修改对应样式
-                $(className).css("animation", "monkeymove 1500ms steps(8) infinite");
+                $(className).css("animation", "monkeymove 1800ms steps(8) infinite");
                 // animate动画效果，向左平滑移动，花费1秒钟
                 $(className).animate({ left: leftmove5 }, 1000)
                 break
             case 'pig':
                 className = ".pig"
-                $(className).css("animation", "pigmove 1500ms steps(8) infinite");
+                $(className).css("animation", "pigmove 1800ms steps(8) infinite");
                 $(className).animate({ left: leftmove5 }, 1000)
                 break
             case 'TangMonk':
                 className = ".TangMonk"
-                $(className).css("animation", "TangMonkmove 1500ms steps(8) infinite");
+                $(className).css("animation", "TangMonkmove 1800ms steps(8) infinite");
                 $(className).animate({ left: leftmove5 }, 1000)
                 break
             case 'ShaMonk':
                 className = ".ShaMonk"
-                $(className).css("animation", "ShaMonkmove 1500ms steps(8) infinite");
+                $(className).css("animation", "ShaMonkmove 1800ms steps(8) infinite");
                 $(className).animate({ left: leftmove5 }, 1000)
                 break
         }
@@ -69,22 +69,22 @@ $('.actions').on('click', 'button', function (e) {
         switch (idName) {
             case 'monkey':
                 className = ".monkey"
-                $(className).css("animation", "monkeymove 500ms steps(8) infinite");
+                $(className).css("animation", "monkeymove 300ms steps(8) infinite");
                 $(className).animate({ left: leftmove_5 }, 1000)
                 break
             case 'pig':
                 className = ".pig"
-                $(className).css("animation", "pigmove 500ms steps(8) infinite");
+                $(className).css("animation", "pigmove 300ms steps(8) infinite");
                 $(className).animate({ left: leftmove_5 }, 1000)
                 break
             case 'TangMonk':
                 className = ".TangMonk"
-                $(className).css("animation", "TangMonkmove 500ms steps(8) infinite");
+                $(className).css("animation", "TangMonkmove 300ms steps(8) infinite");
                 $(className).animate({ left: leftmove_5 }, 1000)
                 break
             case 'ShaMonk':
                 className = ".ShaMonk"
-                $(className).css("animation", "ShaMonkmove 500ms steps(8) infinite");
+                $(className).css("animation", "ShaMonkmove 300ms steps(8) infinite");
                 $(className).animate({ left: leftmove_5 }, 1000)
                 break
         }
