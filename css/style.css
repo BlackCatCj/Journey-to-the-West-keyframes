@@ -4,25 +4,28 @@
 	/* 取消li的样式 */
 	list-style: none;
 }
-html,body {
-	height: 100%;
+body {
+	width: 100%;
+	height: 100vh;
 }
 /* 背景的设置 */
 .main {
 	height: 100%;
 	width: 100%;
-	-webkit-background-size: cover;
-	background-size: cover;
+	/* -webkit-background-size: cover;
+	background-size: cover; */
 	overflow: hidden;
 	position: relative;
 }
 .main ul {
 	height: 100%;
+	/* 必须要这么宽，否则图片滚动中就会有明显的拼接痕迹和闪动，尽管两幅图宽度为1920*2=3840px */
 	width: 3920px;
 	position: absolute;
 	top: 0;
 	left: 0;
-	animation: bg 50s linear infinite;
+	
+	animation: bg 40s linear infinite;
 }
 /* 背景图的移动 */
 @keyframes bg {
@@ -36,13 +39,21 @@ html,body {
 .main ul li {
 	height: 100%;
 	width: 100%;
-	background: url(../img/背景.jpg);
-	background-repeat: no-repeat;
+	background: url(../img/背景.jpg) no-repeat ;
+	
 	float: left;
 	margin-left: -2000px;
+	
 }
 
-
+/* 适应手机 利用手机的最小高度进行响应*/
+/* 当高度大于800px时触发 */
+@media(min-height:800px){
+	.main ul li{
+		/* 拉伸图片 */
+		background-size: cover; 
+	}
+}
 /* 孙悟空走路 */
 .monkey {
 	z-index: 999;
@@ -88,8 +99,8 @@ html,body {
 	background: url(../img/唐僧.png) 0 0 no-repeat;
 	position: absolute;
 	top: 48%;
-	margin-top: -24px ;
 	left: 50%;
+	margin-top: -24px ;
 	animation: TangMonkmove 1s steps(8) infinite;
 }
 @keyframes TangMonkmove {
@@ -105,8 +116,8 @@ html,body {
 	background: url(../img/沙僧.png) 0 0  no-repeat;
 	position: absolute;
 	top: 65%;
-	margin-top: -35px ;
 	left: 62%;
+	margin-top: -35px ;
 	animation: ShaMonkmove 1s steps(8) infinite;
 }
 @keyframes ShaMonkmove {
@@ -149,3 +160,4 @@ html,body {
 .actions>button.active{
     box-shadow: 2px 2px 3px rgba(0, 0, 0 , 0.8);
 }
+
